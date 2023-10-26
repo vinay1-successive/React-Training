@@ -115,11 +115,11 @@ function App() {
           justifyContent: "space-between",
         }}
       >
-        <Button color="green" />
-        <Button color="blue" />
-        <Button color="yellow" />
-        <Button color="purple" />
-        <Button color="black" />
+        <Button text="Button-1" color="green" />
+        <Button text="Button-2" color="blue" />
+        <Button text="Button-3" color="yellow" />
+        <Button text="Button-4" color="purple" />
+        <Button text="Button-5" color="black" />
       </div>
     </>
   );
