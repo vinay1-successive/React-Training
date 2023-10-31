@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Weather = (props) => {
   const { value } = props;
   let text = "";

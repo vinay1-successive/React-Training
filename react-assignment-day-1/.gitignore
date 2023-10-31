@@ -2,9 +2,14 @@
 
 # dependencies
 /node_modules
+/public
 /.pnp
 .pnp.js
 package-lock.json
+App.test.js
+logo.svg
+reportWebVitals.js
+setupTests.js
 # testing
 /coverage
  
