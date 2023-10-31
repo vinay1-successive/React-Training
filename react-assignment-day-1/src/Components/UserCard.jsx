@@ -1,4 +1,4 @@
-export const UserCard = (props) => {
+const UserCard = (props) => {
   const { userName, email, avatarUrl } = props;
   return (
     <div
@@ -16,3 +16,5 @@ export const UserCard = (props) => {
     </div>
   );
 };
+
+export default UserCard;
