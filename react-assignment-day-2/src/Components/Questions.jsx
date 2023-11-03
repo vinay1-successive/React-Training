@@ -16,10 +16,11 @@ import TaskList from "./TaskList/TaskList.jsx";
 import StudentList from "./StudentList/StudentList.jsx";
 import EmployeeSalary from "./EmployeeSalary/EmployeeSalary.jsx";
 import CopyToClipboard from "./CopyToClipboard/CopyToClipboard.jsx";
-import UseLocalStorage from "./UseLocalStorage/UseLocalStorage.jsx";
+import UseLocalStorage1 from "./UseLocalStorage/UseLocalStorage1.jsx";
 import CustomTimer from "./CustomTimer/CustomTimer.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Links from "./Links/Links.jsx";
+import Error from './Error.jsx'
 import { StylesQuestions } from "./Question.js";
 const Questions = () => {
   return (
@@ -172,7 +173,7 @@ const Questions = () => {
               <Route
                 path="/question18"
                 element={
-                  <UseLocalStorage
+                  <UseLocalStorage1
                     styles={StylesQuestions}
                     value={Question.UseLocalStorage}
                   />
@@ -188,6 +189,7 @@ const Questions = () => {
                 }
               />
             </Route>
+            <Route path="*" element={<Error/>}/>
           </Routes>
         </BrowserRouter>
       </div>

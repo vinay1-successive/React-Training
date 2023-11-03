@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { styleAll } from "../Question";
 
-const CustomTimer = (props) => {
+const useTimer = () => {
   const [state, setState] = useState(false);
   const [seconds, setSeconds] = useState(0);
   const [minute, setMinute] = useState(0);
@@ -22,6 +22,19 @@ const CustomTimer = (props) => {
       return () => clearInterval(id);
     }
   }, [seconds, state, minute, hours]);
+  return {
+    seconds,
+    setSeconds,
+    minute,
+    hours,
+    setState,
+    handleRest,
+  };
+};
+
+const CustomTimer = (props) => {
+  const { minute, seconds, setSeconds, hours, setState, handleRest } =
+    useTimer();
   return (
     <>
       <div style={props.styles.div}>{props.value}</div>

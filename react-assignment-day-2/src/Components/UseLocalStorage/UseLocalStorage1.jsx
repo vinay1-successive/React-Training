@@ -1,22 +1,32 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import React, { useState } from "react";
 import { styleAll } from "../Question";
+const useLocalStorage = (key) => {
+  const [data, setData] = useState(JSON.parse(localStorage.getItem(key)) || []);
 
-const UseLocalStorage = (props) => {
-  const [text, setText] = useState("");
-  const [data, setData] = useState(
-    JSON.parse(localStorage.getItem("items")) || []
-  );
-  const saveToLocalStorage = (data) => {
-    localStorage.setItem("items", JSON.stringify(data));
-    setData(data);
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(data));
+  }, [data, key]);
+
+  const saveToLocalStorage = (value) => {
+    if (value.name !== "") setData([...data, value]);
   };
 
   const clearLocalStorage = () => {
-    localStorage.removeItem("items");
     setData([]);
+    localStorage.clear();
   };
+
+  return { data, saveToLocalStorage, clearLocalStorage };
+};
+
+const UseLocalStorage1 = (props) => {
+  const [text, setText] = useState("");
+  const { data, saveToLocalStorage, clearLocalStorage } =
+    useLocalStorage("items");
+
   const handleInput = () => {
-    saveToLocalStorage([...data, { name: text }]);
+    saveToLocalStorage({ name: text });
     setText("");
   };
 
@@ -44,4 +54,4 @@ const UseLocalStorage = (props) => {
   );
 };
 
-export default UseLocalStorage;
+export default UseLocalStorage1;
