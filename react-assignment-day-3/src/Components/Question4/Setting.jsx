@@ -1,7 +1,9 @@
+import { styleAll } from "../Question";
+
 const Setting = () => {
   return (
     <>
-      <div>Setting Page</div>
+      <div style={styleAll.div}>Setting Page</div>
     </>
   );
 };

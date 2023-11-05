@@ -1,29 +1,33 @@
 import { useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
-import { userState } from "./Question4";
+import { Link, Outlet, Routes, Route } from "react-router-dom";
+import { userState } from "../Questions"
+import Profile from "./Profile";
+import Setting from "./Setting";
+import { styleAll } from "../Question";
 
 const Dashboard = () => {
   const { user, setUser } = useContext(userState);
   return (
     <>
-      <div style={{ flexDirection: "column", display: "flex" }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/products">Products</Link>
-        {user ? (
-          <>
-            <Link onClick={() => setUser(false)} to="/">
-              Log out
+      {user && (
+        <>
+          <div style={styleAll.link}>
+            <Link style={styleAll.link} to="profile">
+              Profile
             </Link>
-            <div>Dashboard Page</div>
-            <Link to="/dashboard/profile">Profile</Link>
-            <Link to="/dashboard/setting">Setting</Link>
-            <Outlet />
-          </>
-        ) : (
-          <Link to="/login">Log In</Link>
-        )}
+            <Link style={styleAll.link} to="setting">
+              Setting
+            </Link>
+          </div>
+        </>
+      )}
+      <div style={{ flexDirection: "column", display: "flex" }}>
+        <Routes>
+          <Route path="profile" element={<Profile />} />
+          <Route path="setting" element={<Setting />} />
+        </Routes>
       </div>
+      <Outlet />
     </>
   );
 };

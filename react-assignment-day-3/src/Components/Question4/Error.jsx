@@ -1,9 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { styleAll } from "../Question";
 const Error = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div onClick={() => navigate("/")}>Error Page</div>
+      <div>
+        <button  style={styleAll.label}>
+        <Link to="/question4">Go back</Link>
+        </button>
+      </div>
     </>
   );
 };

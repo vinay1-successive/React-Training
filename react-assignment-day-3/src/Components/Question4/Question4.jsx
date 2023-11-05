@@ -1,51 +1,55 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import Error from "./Error";
-import { createContext } from "react";
-import { useState } from "react";
 import Login from "./Login";
 import Dashboard from "./Dashboard";
-import Profile from "./Profile";
-import Setting from "./Setting";
 import Products from "./Products";
-import Product from "./Product";
-import productData from "./Data";
-export const data = {
-  name: "Vinay",
-  password: "12345",
-};
-export const userState = createContext();
+import { styleAll } from "../Question";
+import { useContext } from "react";
+import { userState } from "../Questions";
+import Error from "../Error";
 const Question4 = (props) => {
-  const [user, setUser] = useState(false);
+
+  const { user, setUser } = useContext(userState);
   const { style, value } = props;
   return (
-    <userState.Provider value={{ user, setUser }}>
-      <div style={{ border: "2px solid", padding: "20px" }}>
-        <div style={style.div}>{value[0]}</div>
-        <div style={style.div}>{value[1]}</div>
-        <div style={style.div}>{value[2]}</div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />}>
-              <Route path="/dashboard/profile" element={<Profile />} />
-              <Route path="/dashboard/setting" element={<Setting />} />
-            </Route>
-            <Route path="/products" element={<Products />} />
+    
+      <div>
+        <div style={styleAll.Ques}>{value[0]}</div>
+        <div style={styleAll.Ques}>{value[1]}</div>
+        <div style={styleAll.Ques}>{value[2]}</div>
+        <Link style={styleAll.link} to="home">
+          Home
+        </Link>
+        <Link style={styleAll.link} to="about">
+          About
+        </Link>
 
-            <Route
-              path="/products/:pId"
-              element={<Product value={productData} />}
-            />
+        <Link style={styleAll.link} to="dashboard">
+          Dashboard
+        </Link>
+        <Link style={styleAll.link} to="products">
+          Products
+        </Link>
+        {user ? (
+          <Link onClick={()=> setUser(false)} style={styleAll.link} to="home">
+            Log Out
+          </Link>
+        ) : (
+          <Link style={styleAll.link} to="login">
+            Login
+          </Link>
+        )}
 
-            <Route path="*" element={<Error />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="login" element={<Login />} />
+          <Route path="dashboard/*" element={<Dashboard />} />
+          <Route path="products/*" element={<Products />} />
+          <Route path=":any" element={<Error/>}/>
+        </Routes>
       </div>
-    </userState.Provider>
   );
 };
 export default Question4;

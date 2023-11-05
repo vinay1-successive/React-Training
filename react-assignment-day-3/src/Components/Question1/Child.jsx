@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { userState } from "./Question1";
+import { styleAll } from "../Question";
 
 const Child = () => {
   const { login, setLogin } = useContext(userState);
@@ -14,20 +15,21 @@ const Child = () => {
         User LoggedIn:{" "}
         {login && name ? (
           <div>Welcome {name}!</div>
-        ) : (
-          <div>
+        ) : ( 
+          <div style={styleAll.form1}>
             <p>Please Log In</p>
             <input
+              style={styleAll.input}
               type="text"
               required
               onChange={(e) => setName(e.target.value)}
               value={name}
             />
+            <button style={styleAll.label} onClick={handleLogin}>
+              Click to {login ? "Log out" : "Please Login"}
+            </button>
           </div>
         )}
-        <button onClick={handleLogin}>
-          Click to {login ? "Log out" : "Please Login"}
-        </button>
       </div>
     </>
   );

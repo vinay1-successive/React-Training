@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createContext } from "react";
 import Child from "./Child";
+import { styleAll } from "../Question";
 
 export const userState = createContext();
 export const userTheme = createContext();
@@ -9,9 +10,9 @@ const Question2 = (props) => {
   const [login, setLogin] = useState(false);
   const [theme, setTheme] = useState("light");
   return (
-    <div style={{ border: "2px solid", padding: "20px" }}>
-      <div style={style.div}>{value}</div>
-      <div>
+    <div>
+      <div style={styleAll.Ques}>{value}</div>
+      <div style={styleAll.form}>
         <userState.Provider value={{ login, setLogin }}>
           <userTheme.Provider value={{ theme, setTheme }}>
             <Child />

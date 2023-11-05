@@ -1,22 +1,17 @@
-import { Link, Outlet } from "react-router-dom";
-
-import productData from "./Data";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
 import { useContext } from "react";
-import { userState } from "./Question4";
+import { userState } from "../Questions";
+import Product from "./Product";
+import productData from "./Data";
+import { styleAll } from "../Question";
+import Error from "../Error";
 const Products = () => {
   const { user, setUser } = useContext(userState);
   return (
     <>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/dashboard">Dashboard</Link>
-        {user ? (
+        {user && (
           <>
-            <Link onClick={() => setUser(false)} to="/">
-              Log out
-            </Link>
-            <Link to="/products">Products</Link>
             <div
               style={{
                 display: "flex",
@@ -25,22 +20,23 @@ const Products = () => {
               }}
             >
               {productData.map((item, index) => {
-                const link = `/products/${item.id}`;
-                console.log(link);
+                const link = item.id + "";
                 return (
                   <>
-                    <Link key={index} to={link}>
+                    <Link style={styleAll.link} key={index} to={link}>
                       {item.name}
                     </Link>
-                    <Outlet />
                   </>
                 );
               })}
             </div>
           </>
-        ) : (
-          <Link to="/login">Log In</Link>
         )}
+        <Routes>
+          {}
+          <Route path=":pId" element={<Product value={productData} />} />
+        </Routes>
+        <Outlet />
       </div>
     </>
   );

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-import { userState } from "./Question4";
+import { userState } from "../Questions";
 import { useContext } from "react";
+import { styleAll } from "../Question";
 const About = () => {
   const { user, setUser } = useContext(userState);
   return (
@@ -10,23 +11,14 @@ const About = () => {
         style={{
           justifyContent: "space-evenly",
           display: "flex",
-          flexDirection: "column",
           width: "500px",
+          flexDirection: "column",
         }}
       >
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        {user ? (
+        {user && (
           <>
-            <Link onClick={() => setUser(false)} to="/">
-              Log out
-            </Link>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/products">Products</Link>
-            <div>About Page</div>
+            <div style={styleAll.div}>About Page</div>
           </>
-        ) : (
-          <Link to="/login">Log In</Link>
         )}
       </div>
     </>
