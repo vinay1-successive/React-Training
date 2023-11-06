@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { useContext } from "react";
-import { userState } from "../Routing/Routing";
+import { userState } from "../../Routing/Routing";
 import productData from "../../MockData/productData";
 import styleAll from "../../handler/Style";
 const Products = () => {

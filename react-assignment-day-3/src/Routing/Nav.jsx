@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import styleAll from "../../handler/Style";
+import styleAll from "../handler/Style";
 const Nav = () => {
   return (
     <>

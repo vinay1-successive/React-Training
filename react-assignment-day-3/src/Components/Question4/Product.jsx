@@ -1,7 +1,7 @@
 import { Link, Outlet, useParams } from "react-router-dom";
 import productData from "../../MockData/productData";
 import { useContext } from "react";
-import { userState } from "../Routing/Routing";
+import { userState } from "../../Routing/Routing";
 import styleAll from "../../handler/Style";
 
 const Product = () => {
