@@ -1,5 +1,5 @@
 
-import styleAll from "../../handler/Style";
+import styleAll from "../../../handler/Style";
 
 const Profile = () => {
   return (

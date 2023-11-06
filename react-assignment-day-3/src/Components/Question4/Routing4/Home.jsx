@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { userState } from "../../Routing/Routing";
-import styleAll from "../../handler/Style";
+import { userState } from "../../../Routing/Routing";
+import styleAll from "../../../handler/Style";
 
 const Home = () => {
   const { user } = useContext(userState);

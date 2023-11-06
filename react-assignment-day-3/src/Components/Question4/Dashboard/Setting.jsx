@@ -1,4 +1,4 @@
-import styleAll from "../../handler/Style";
+import styleAll from "../../../handler/Style";
 
 const Setting = () => {
   return (

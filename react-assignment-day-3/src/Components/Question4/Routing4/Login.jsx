@@ -1,7 +1,7 @@
-import { userState } from "../../Routing/Routing";
+import { userState } from "../../../Routing/Routing";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import userData from "../../MockData/userData";
+import userData from "../../../MockData/userData";
 const Login = () => {
   const navigate = useNavigate();
   const { setUser } = useContext(userState);
