@@ -1,20 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { userState } from  "../Questions"
-import { styleAll } from "../Question";
+import { userState } from "../Routing/Routing";
+import styleAll from "../../handler/Style";
 
 const Home = () => {
-  const { user, setUser } = useContext(userState);
+  const { user } = useContext(userState);
   return (
     <>
-      <div
-        style={{
-          justifyContent: "space-evenly",
-          display: "flex",
-          width: "500px",
-          flexDirection: "column",
-        }}
-      >
+      <div>
         {user && (
           <>
             <div style={styleAll.div}>Home Page</div>

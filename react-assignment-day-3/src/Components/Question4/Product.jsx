@@ -1,18 +1,18 @@
 import { Link, Outlet, useParams } from "react-router-dom";
-import productData from "./Data";
+import productData from "../../MockData/productData";
 import { useContext } from "react";
-import { userState } from "../Questions";
-import { styleAll } from "../Question";
+import { userState } from "../Routing/Routing";
+import styleAll from "../../handler/Style";
 
 const Product = () => {
-  const { user, setUser } = useContext(userState);
+  const { user } = useContext(userState);
   const { pId } = useParams();
   console.log(pId);
   const valid = /^(1?[1-9]|3)$/.test(pId);
   console.log(valid);
   console.log(user);
   let data;
-  if (!valid) {
+  if (valid) {
     data = productData[pId - 1];
   }
 

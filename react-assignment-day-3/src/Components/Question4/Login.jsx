@@ -1,10 +1,10 @@
-import { userState } from  "../Questions"
+import { userState } from "../Routing/Routing";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { data } from "../Question";
+import userData from "../../MockData/userData";
 const Login = () => {
-  const navigate=useNavigate();
-  const { user, setUser } = useContext(userState);
+  const navigate = useNavigate();
+  const { setUser } = useContext(userState);
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUser = {
@@ -12,22 +12,17 @@ const Login = () => {
       password: e.target.password.value,
     };
     console.log(newUser);
-    if (data.name === newUser.name && data.password === newUser.password) {
+    if (
+      userData.name === newUser.name &&
+      userData.password === newUser.password
+    ) {
       setUser(true);
-      navigate("home")
+      navigate("home");
     }
   };
   return (
     <>
-      <div
-        style={{
-          justifyContent: "space-between",
-          display: "flex",
-          flexDirection: "column",
-          width: "300px",
-        }}
-      >
-      </div>
+      <div></div>
       <form onSubmit={handleSubmit}>
         <input name="name" type="text" />
         <input name="password" type="password" />

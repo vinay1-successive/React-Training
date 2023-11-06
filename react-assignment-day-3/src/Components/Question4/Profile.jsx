@@ -1,4 +1,5 @@
-import { styleAll } from "../Question";
+
+import styleAll from "../../handler/Style";
 
 const Profile = () => {
   return (

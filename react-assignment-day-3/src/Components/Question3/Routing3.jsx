@@ -1,10 +1,10 @@
 import { Routes, Route, Link, Outlet } from "react-router-dom";
+import Error from "./Error";
+import  styleAll  from "../../handler/Style";
 import Home from "./Home";
 import About from "./About";
-import Error from "./Error";
-import { styleAll } from "../Question";
-const Question3 = (props) => {
-  const { style, value } = props;
+const Routing3 = (props) => {
+  const { value } = props;
   return (
     <div>
       <div style={styleAll.Ques}>{value}</div>
@@ -15,7 +15,7 @@ const Question3 = (props) => {
         About
       </Link>
       <Routes>
-        <Route path="home" element={<Home />} />
+        <Route path="home" element={<Home/>} />
         <Route path="about" element={<About />} />
         <Route path=":any" element={<Error />} />
       </Routes>
@@ -24,4 +24,4 @@ const Question3 = (props) => {
     </div>
   );
 };
-export default Question3;
+export default Routing3;

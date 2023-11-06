@@ -1,12 +1,10 @@
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useContext } from "react";
-import { userState } from "../Questions";
-import Product from "./Product";
-import productData from "./Data";
-import { styleAll } from "../Question";
-import Error from "../Error";
+import { userState } from "../Routing/Routing";
+import productData from "../../MockData/productData";
+import styleAll from "../../handler/Style";
 const Products = () => {
-  const { user, setUser } = useContext(userState);
+  const { user } = useContext(userState);
   return (
     <>
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -32,10 +30,7 @@ const Products = () => {
             </div>
           </>
         )}
-        <Routes>
-          {}
-          <Route path=":pId" element={<Product value={productData} />} />
-        </Routes>
+
         <Outlet />
       </div>
     </>

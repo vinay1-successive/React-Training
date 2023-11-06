@@ -1,4 +1,4 @@
-import { styleAll } from "../Question";
+import styleAll from "../../handler/Style";
 
 const Setting = () => {
   return (
@@ -7,4 +7,4 @@ const Setting = () => {
     </>
   );
 };
-export default Setting
+export default Setting;

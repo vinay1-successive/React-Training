@@ -1,12 +1,10 @@
 import { useContext } from "react";
-import { Link, Outlet, Routes, Route } from "react-router-dom";
-import { userState } from "../Questions"
-import Profile from "./Profile";
-import Setting from "./Setting";
-import { styleAll } from "../Question";
+import { Link, Outlet } from "react-router-dom";
+import { userState } from "../Routing/Routing";
+import styleAll from "../../handler/Style";
 
 const Dashboard = () => {
-  const { user, setUser } = useContext(userState);
+  const { user } = useContext(userState);
   return (
     <>
       {user && (
@@ -21,12 +19,7 @@ const Dashboard = () => {
           </div>
         </>
       )}
-      <div style={{ flexDirection: "column", display: "flex" }}>
-        <Routes>
-          <Route path="profile" element={<Profile />} />
-          <Route path="setting" element={<Setting />} />
-        </Routes>
-      </div>
+      <div style={{ flexDirection: "column", display: "flex" }}></div>
       <Outlet />
     </>
   );

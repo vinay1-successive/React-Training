@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { userState, userTheme } from "./Question2";
 import { styleTheme } from "./ChildC";
-import { styleAll } from "../Question";
+import  styleAll  from "../../handler/Style";
 
 const Child = () => {
   const { login, setLogin } = useContext(userState);

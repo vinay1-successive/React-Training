@@ -1,16 +1,16 @@
 import { createContext, useState } from "react";
 import Error from "./Error.jsx";
 import Nav from "./Nav.jsx";
-import Question from "./Question.js";
-import Question1 from "./Question1/Question1.jsx";
-import Question2 from "./Question2/Question2.jsx";
-import Question3 from "./Question3/Question3.jsx";
-import Question4 from "./Question4/Question4.jsx";
+import Question from "../../MockData/Question.js";
+import Question1 from "../Question1/Question1.jsx";
+import Question2 from "../Question2/Question2.jsx";
+import Question3 from "../Question3/Routing3.jsx";
+import Question4 from "../Question4/Routing4.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const userState = createContext();
 
-const Questions = () => {
+const Routing = () => {
   const [user, setUser] = useState(false);
   const Style = {
     div: {
@@ -59,4 +59,4 @@ const Questions = () => {
     </>
   );
 };
-export default Questions;
+export default Routing;

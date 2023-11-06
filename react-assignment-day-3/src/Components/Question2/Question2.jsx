@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createContext } from "react";
 import Child from "./Child";
-import { styleAll } from "../Question";
+import  styleAll from "../../handler/Style";
 
 export const userState = createContext();
 export const userTheme = createContext();

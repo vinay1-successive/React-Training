@@ -1,12 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
-import { styleAll } from "../Question";
+import { Link } from "react-router-dom";
+
+import styleAll from "../../handler/Style";
 const Error = () => {
-  const navigate = useNavigate();
   return (
     <>
       <div>
-        <button  style={styleAll.label}>
-        <Link to="/question4">Go back</Link>
+        <button style={styleAll.label}>
+          <Link to="/question4">Go back</Link>
         </button>
       </div>
     </>
