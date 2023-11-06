@@ -3,7 +3,7 @@ import Questions from "./Components/Questions";
 function App() {
   return (
     <>
-      <div>
+      <div style={{backgroundColor: "PowderBlue",height:"100vh"}}>
         <Questions />
       </div>
     </>
