@@ -1,6 +1,6 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
 import { useState } from "react";
-import { styleAll } from "../Data";
+import { styleAll } from "../../helper/Styles";
 const Question11 = (props) => {
   const [open, setOpen] = useState(false);
   const openDialog = () => setOpen(true);

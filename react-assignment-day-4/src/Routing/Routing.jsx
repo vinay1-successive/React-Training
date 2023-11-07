@@ -1,21 +1,22 @@
-import Question1 from "./Question1/Question1";
-import Question2 from "./Question2/Question2";
-import Question3 from "./Question3/Question3";
-import Question4 from "./Question4/Question4";
-import Question5 from "./Question5/Question5";
-import Question6 from "./Question6/Question6";
-import Question, { style } from "./Data";
-import Question7 from "./Question7/Question7";
-import Question8 from "./Question8/Question8";
-import Question9 from "./Question9/Question9";
+import Question1 from "../Components/Question1/Question1";
+import Question2 from "../Components/Question2/Question2";
+import Question3 from "../Components/Question3/Question3";
+import Question4 from "../Components/Question4/Question4";
+import Question5 from "../Components/Question5/Question5";
+import Question6 from "../Components/Question6/Question6";
+import Question7 from "../Components/Question7/Question7";
+import Question8 from "../Components/Question8/Question8";
+import Question9 from "../Components/Question9/Question9";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Question10 from "./Question10/Question10";
-import Question11 from "./Question11/Question11";
-import Question12 from "./Question12/Question12";
-import Question13 from "./Question13/Question13";
-import Question14 from "./Question14/Question14";
+import Question10 from "../Components/Question10/Question10";
+import Question11 from "../Components/Question11/Question11";
+import Question12 from "../Components/Question12/Question12";
+import Question13 from "../Components/Question13/Question13";
+import Question14 from "../Components/Question14/Question14";
+import { style, styleAll } from "../helper/Styles";
+import Question from "../mockData/Data";
 
-const Questions = () => {
+const Routing = () => {
   return (
     <>
       <div>
@@ -84,4 +85,4 @@ const Questions = () => {
     </>
   );
 };
-export default Questions;
+export default Routing;

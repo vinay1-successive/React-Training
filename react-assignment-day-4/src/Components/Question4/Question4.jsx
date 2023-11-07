@@ -1,20 +1,7 @@
-import { useState } from "react";
+import UserValidate from "./UserValidate";
 
 const Question4 = (props) => {
-  const [name, setName] = useState();
-  const [password1, setPassword1] = useState();
-  const [password2, setPassword2] = useState();
-  const [state, setState] = useState(true);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newData = {
-      name: name,
-      password1: password1,
-      password2: password2,
-    };
-    console.log(newData);
-  };
-  //   const handleValidation = (e) => {};
+  const { data, handleData, state, handleSubmit } = UserValidate();
   return (
     <>
       <div style={props.style.div}>
@@ -26,8 +13,10 @@ const Question4 = (props) => {
             </label>
             <input
               style={props.style.input}
-              onChange={(e) => setName(e.target.value)}
+              onChange={handleData}
               type="text"
+              name="name"
+              value={data.name}
             />
           </div>
           <div>
@@ -36,16 +25,10 @@ const Question4 = (props) => {
             </label>
             <input
               style={props.style.input}
-              value={password1}
-              onChange={(e) => {
-                setPassword1(e.target.value);
-                if (password2 === e.target.value) {
-                  setState(false);
-                } else {
-                  setState(true);
-                }
-              }}
+              value={data.password1}
+              onChange={handleData}
               type="password"
+              name="password1"
             />
           </div>
           <div>
@@ -54,16 +37,10 @@ const Question4 = (props) => {
             </label>
             <input
               style={props.style.input}
-              value={password2}
-              onChange={(e) => {
-                setPassword2(e.target.value);
-                if (password1 === e.target.value) {
-                  setState(false);
-                } else {
-                  setState(true);
-                }
-              }}
+              value={data.password2}
+              onChange={handleData}
               type="password"
+              name="password2"
             />
           </div>
           <button style={props.style.button} disabled={state} type="submit">

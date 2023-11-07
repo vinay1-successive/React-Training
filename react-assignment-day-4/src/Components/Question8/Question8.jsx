@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
 const Question8 = (props) => {
   const [input, setInput] = useState({ c: 0, f: 0 });

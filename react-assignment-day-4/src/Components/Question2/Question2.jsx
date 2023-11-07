@@ -18,7 +18,7 @@ const Question2 = (props) => {
     <>
       <div style={props.style.div}>
         <div style={props.style.Ques}>{props.value}</div>
-        <form style={props.style.form}>
+        <form style={props.style.div}>
           <div>
             <label style={props.style.label} htmlFor="name">
               Name :

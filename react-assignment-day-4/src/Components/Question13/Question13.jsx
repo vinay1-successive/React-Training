@@ -1,7 +1,6 @@
 import { Button, FormControl, FormGroup, TextField } from "@mui/material";
-
-import { styleAll } from "../Data";
 import Validation from "./Validation";
+import { styleAll } from "../../helper/Styles";
 const Question13 = (props) => {
   const { formik } = Validation();
   const handleSubmit = (e) => {

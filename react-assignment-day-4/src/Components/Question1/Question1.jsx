@@ -1,11 +1,16 @@
 import { useState } from "react";
 
 const Question1 = (props) => {
-  const [name, setName] = useState("");
-  const [input, setInput] = useState(false);
+  const [data, setData] = useState({ name: "", input: false });
+  const handleData = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setInput(true);
+    if (data.name !== "") {
+      setData({ ...data, input: true });
+    }
   };
   return (
     <>
@@ -18,9 +23,10 @@ const Question1 = (props) => {
             </label>
             <input
               style={props.style.input}
-              value={name}
+              value={data.name}
               type="text"
-              onChange={(e) => setName(e.target.value)}
+              name="name"
+              onChange={handleData}
             />
           </div>
           <button
@@ -31,7 +37,7 @@ const Question1 = (props) => {
             Submit
           </button>
         </form>
-        {input && <p>Your name is: {name}</p>}
+        {data.input && <p>Your name is: {data.name}</p>}
       </div>
     </>
   );

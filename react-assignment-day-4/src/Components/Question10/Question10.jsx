@@ -1,7 +1,7 @@
 import { Button } from "@mui/base";
 import { TextField } from "@mui/material";
-import { styleAll } from "../Data";
 import useValidate from "./UseValidate";
+import { styleAll } from "../../helper/Styles";
 
 const Question10 = (props) => {
   const { data, error, handleInput, handleSubmit } = useValidate();
