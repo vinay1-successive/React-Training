@@ -11,7 +11,7 @@ const Nav = () => {
     <>
       {" "}
       <div style={style.div}>
-        <Link style={style.Link} to="/">
+        <Link style={style.Link} to="/home">
           Home
         </Link>
         <Link style={style.Link} to="/about">

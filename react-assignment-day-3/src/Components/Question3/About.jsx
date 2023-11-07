@@ -1,10 +1,9 @@
-import Nav from "./Nav";
+import styleAll from "../../handler/Style";
 
 const About = () => {
   return (
     <>
-      <Nav />
-      <div>About Page</div>
+      <div style={styleAll.div}>About Page</div>
     </>
   );
 };

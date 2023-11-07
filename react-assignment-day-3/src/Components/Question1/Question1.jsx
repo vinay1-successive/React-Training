@@ -2,14 +2,16 @@ import { useState } from "react";
 import { createContext } from "react";
 import Child from "./Child";
 
+import styleAll from "../../handler/Style";
+
 export const userState = createContext();
 const Question1 = (props) => {
   const { style, value } = props;
 
   const [login, setLogin] = useState(false);
   return (
-    <div style={{ border: "2px solid", padding: "20px" }}>
-      <div style={style.div}>{value}</div>
+    <div>
+      <div style={styleAll.Ques}>{value}</div>
       <div>
         <userState.Provider value={{ login, setLogin }}>
           <Child />
