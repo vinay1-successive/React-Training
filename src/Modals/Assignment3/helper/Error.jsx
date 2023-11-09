@@ -1,4 +1,4 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Error = () => {
   console.log("Out err0r");
@@ -6,7 +6,7 @@ const Error = () => {
     <>
       <div>
         <button>
-          <Link to="/question1">Go back</Link>
+          <Link to="/Assignment3/question1">Go back</Link>
         </button>
       </div>
     </>

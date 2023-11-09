@@ -12,7 +12,6 @@ export const styleAll = {
   },
   div1: {
     display: "flex",
-    width: "400px",
     flexDirection: "column",
     margin: "30px",
     justifyContent: "center",
@@ -63,6 +62,11 @@ export const styleAll = {
     textDecoration: "none",
     padding: "12px",
   },
+  div2:{
+    display:"flex",
+    flexDirection:"column",
+    gap:"30px"
+  }
 };
 
 export const style = {
