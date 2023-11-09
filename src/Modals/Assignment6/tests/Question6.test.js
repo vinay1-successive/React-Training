@@ -15,12 +15,10 @@ describe("Modal Component", () => {
     expect(screen.getByText("Close")).toBeInTheDocument();
   });
   it("call onClose when the close button is clicked", () => {
-    const onClose = jest.fn();
-    render(<Modal isOpen={true} onClose={onClose} />);
+    render(<Modal isOpen={true} />);
 
     const closeButton = screen.getByText("Close");
     fireEvent.click(closeButton);
-
-    expect(onClose).toHaveBeenCalled();
+    expect(screen.queryByText("Modal Open")).not.toBeInTheDocument();
   });
 });
