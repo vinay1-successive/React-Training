@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { styleAll } from "../../../Helper/Styles";
-
-const Question4 = () => {
+import QuestionData from "../../../Components/QuestionData";
+import Question from "../../../MockData/Data6";
+const Question4 = (props) => {
   const [data, setData] = useState({ name: "", password: "" });
   const [user, setUser] = useState(null);
   const handleInput = (e) => {
@@ -21,6 +22,7 @@ const Question4 = () => {
 
   return (
     <div>
+      <QuestionData value={Question.Question4} />
       <form style={styleAll.form1} onSubmit={handleSubmit}>
         <input
           onChange={handleInput}

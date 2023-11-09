@@ -7,9 +7,10 @@ import Assignment3 from "./Modals/Assignment3";
 import Assignment2 from "./Modals/Assignment2";
 import Assignment1 from "./Modals/Assignment1";
 import Assignment6 from "./Modals/Assignment6";
+import { styleAll } from "./Helper/Styles";
 function App() {
   return (
-    <div className="App">
+    <div style={styleAll.div2} className="App">
       {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
         <Assignment1 />
         <Assignment2 />

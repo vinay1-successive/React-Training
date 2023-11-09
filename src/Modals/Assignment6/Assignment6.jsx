@@ -8,12 +8,18 @@ const Assignment6 = () => {
   return (
     <>
       <div>
-      <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <Question1  />
-        <Question3 />
-        <Question4 />
-        <Question5 value={{name:"Vinay",email:"vinay@gmail.com",phone:"7982279945"}}/>
-        <Question6 />
+        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+          <Question1 value={"Component1"} />
+          <Question3 />
+          <Question4 />
+          <Question5
+            value={{
+              name: "Vinay",
+              email: "vinay@gmail.com",
+              phone: "7982279945",
+            }}
+          />
+          <Question6 />
         </ErrorBoundary>
       </div>
     </>
