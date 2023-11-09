@@ -9,7 +9,7 @@ const Login = () => {
   const handleLogin = () => {
     if (input === "Vinay") {
       setUser(true);
-      navi("/question14/child");
+      navi("/Assignment5/question14/child");
     }
   };
   return (
