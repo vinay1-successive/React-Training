@@ -1,5 +1,6 @@
+import { ErrorBoundary } from "react-error-boundary";
 import "./App.css";
-// import { ErrorBoundary } from "react-error-boundary";
+
 
 import Assignment5 from "./Modals/Assignment5";
 import Assignment4 from "./Modals/Assignment4";
@@ -11,14 +12,14 @@ import { styleAll } from "./Helper/Styles";
 function App() {
   return (
     <div style={styleAll.div2} className="App">
-      {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Assignment1 />
         <Assignment2 />
         <Assignment3 />
         <Assignment4 />
         <Assignment5 />
         <Assignment6 />
-      {/* </ErrorBoundary> */}
+      </ErrorBoundary>
     </div>
   );
 }

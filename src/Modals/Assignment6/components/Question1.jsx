@@ -2,11 +2,12 @@ import React, { Suspense } from "react";
 import { styleAll } from "../../../Helper/Styles";
 import QuestionData from "../../../Components/QuestionData";
 import Question from "../../../MockData/Data6";
+import { ErrorBoundary } from "react-error-boundary";
 const Component1 = React.lazy(() => import("../helper/Component1"));
 const Component2 = React.lazy(() => import("../helper/Component2"));
 const Component3 = React.lazy(() => import("../../../Components/QuestionData"));
 const Question1 = (props) => {
-  console.log(props);
+  const { name } = props;
   if (props.value === "Component1") {
     return (
       <Suspense fallback={<div>Loading...</div>}>
@@ -21,7 +22,17 @@ const Question1 = (props) => {
         <Component2 />
       </Suspense>
     );
+  } else if (!name) {
+    console.log(name, 'name-----------------------')
+    return (
+      <>
+        <ErrorBoundary
+          fallback={<div>Something went wrong</div>}
+        ></ErrorBoundary>
+      </>
+    );
   } else {
+    console.log('else-------------------------------')
     return (
       <>
         <Component3 />
