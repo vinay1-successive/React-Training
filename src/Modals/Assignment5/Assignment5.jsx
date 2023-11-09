@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import Nav from "./helper/Nav";
 import Question1 from "./componenets/Question1";
 import Question2 from "./componenets/Question2";
@@ -20,8 +20,7 @@ const Assignment5 = () => {
   return (
     <>
       <div>
-        <BrowserRouter>
-          <Nav style={style.div} />
+        <Nav style={style.div} />
           <Routes>
             <Route
               path="/question1"
@@ -84,7 +83,7 @@ const Assignment5 = () => {
               element={<Question16 style={style} value={Question.Question16} />}
             />
           </Routes>
-        </BrowserRouter>
+        
       </div>
     </>
   );

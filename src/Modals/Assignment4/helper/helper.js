@@ -39,46 +39,102 @@ const Sidebar = ({ open, close }) => {
       <div>
         <Drawer anchor="left" open={open} close={close}>
           <List>
-            <ListItem component={Link} to="/question1" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question1"
+              onClick={close}
+            >
               <ListItemText primary="Question1" />
             </ListItem>
-            <ListItem component={Link} to="/question2" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question2"
+              onClick={close}
+            >
               <ListItemText primary="Question2" />
             </ListItem>
-            <ListItem component={Link} to="/question3" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question3"
+              onClick={close}
+            >
               <ListItemText primary="Question3" />
             </ListItem>
-            <ListItem component={Link} to="/question4" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question4"
+              onClick={close}
+            >
               <ListItemText primary="Question4" />
             </ListItem>
-            <ListItem component={Link} to="/question5" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question5"
+              onClick={close}
+            >
               <ListItemText primary="Question5" />
             </ListItem>
-            <ListItem component={Link} to="/question6" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question6"
+              onClick={close}
+            >
               <ListItemText primary="Question6" />
             </ListItem>
-            <ListItem component={Link} to="/question7" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question7"
+              onClick={close}
+            >
               <ListItemText primary="Question7" />
             </ListItem>
-            <ListItem component={Link} to="/question8" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question8"
+              onClick={close}
+            >
               <ListItemText primary="Question8" />
             </ListItem>
-            <ListItem component={Link} to="/question9" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question9"
+              onClick={close}
+            >
               <ListItemText primary="Question9" />
             </ListItem>
-            <ListItem component={Link} to="/question10" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question10"
+              onClick={close}
+            >
               <ListItemText primary="Question10" />
             </ListItem>
-            <ListItem component={Link} to="/question11" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question11"
+              onClick={close}
+            >
               <ListItemText primary="Question11" />
             </ListItem>
-            <ListItem component={Link} to="/question12" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question12"
+              onClick={close}
+            >
               <ListItemText primary="Question12" />
             </ListItem>
-            <ListItem component={Link} to="/question13" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question13"
+              onClick={close}
+            >
               <ListItemText primary="Question13" />
             </ListItem>
-            <ListItem component={Link} to="/question14" onClick={close}>
+            <ListItem
+              component={Link}
+              to="/Assignment4/question14"
+              onClick={close}
+            >
               <ListItemText primary="Question14" />
             </ListItem>
           </List>

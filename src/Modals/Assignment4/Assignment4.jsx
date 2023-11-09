@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Question1 from "./components/Question1";
 import Question2 from "./components/Question2";
 import Question3 from "./components/Question3";
@@ -20,7 +20,7 @@ const Assingment4 = () => {
   return (
     <>
       <div>
-        <BrowserRouter>
+       
           <Question9 style={style} />
           <Routes>
             <Route
@@ -80,7 +80,7 @@ const Assingment4 = () => {
               element={<Question14 style={style} value={Question.Question14} />}
             />
           </Routes>
-        </BrowserRouter>
+       
       </div>
     </>
   );
