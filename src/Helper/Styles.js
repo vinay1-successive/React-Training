@@ -96,8 +96,9 @@ export const style = {
     fontSize: "20px",
   },
   Ques: {
-    backgroundColor: "beige",
+    backgroundColor: "teal",
     padding: "20px",
     margin: "10px",
+    color:"white",
   },
 };
