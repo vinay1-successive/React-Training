@@ -1,5 +1,4 @@
 import {  Routes, Route } from "react-router-dom";
-import Nav from "./helper/Nav";
 import Question1 from "./componenets/Question1";
 import Question2 from "./componenets/Question2";
 import Question3 from "./componenets/Question3";
@@ -14,13 +13,15 @@ import Question16 from "../Assignment5/componenets/Question16/Question16";
 import Question14 from "../Assignment5/componenets/Question14/Routing/Routing";
 import ApolloProvider2 from "./componenets/ApolloProvider2";
 import ApolloProvider1 from "./componenets/ApolloProvider1";
-import { style } from "../../Helper/Styles";
-import Question from "../../MockData/Data5";
+import { style } from "../../helper/Styles";
+import Question from "../../mockData/Data5";
+import Links from "../../components/Links";
+import { linkTextMain5 } from "../../mockData/AssingmentLinks";
 const Assignment5 = () => {
   return (
     <>
       <div>
-        <Nav style={style.div} />
+        <Links props={linkTextMain5}/>
           <Routes>
             <Route
               path="/question1"

@@ -1,4 +1,4 @@
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 import Button from "../helper/Button";
 
 const Question12 = (props) => {

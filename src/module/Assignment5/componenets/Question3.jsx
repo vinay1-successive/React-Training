@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 import { Button } from "@mui/base";
 import { CircularProgress } from "@mui/material";
 

@@ -4,7 +4,7 @@ import Child from "../Child";
 import { createContext } from "react";
 import { useState } from "react";
 import WithAuth from "../WithAuth";
-import { styleAll } from "../../../../../Helper/Styles";
+import { styleAll } from "../../../../../helper/Styles";
 export const userContext = createContext(null);
 const Routing = (props) => {
   const [user, setUser] = useState(false);

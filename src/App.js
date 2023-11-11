@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Assignment5 from "./Modals/Assignment5";
+import Assignment5 from "./module/Assignment5";
 import Assignment4 from "./module/Assignment4";
 import Assignment3 from "./module/Assignment3";
 import Assignment2 from "./module/Assignment2";

@@ -1,10 +1,9 @@
 import { useState } from "react";
 import * as React from "react";
-import Box from "@mui/material/Box";
-import { DataGrid } from "@mui/x-data-grid";
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 import { Button } from "@mui/material";
 import { columns } from "../helper/userData";
+import BoxPagination from "../../../components/BoxPagination";
 
 const Question4 = (props) => {
   const [data, setdata] = useState([]);
@@ -26,22 +25,7 @@ const Question4 = (props) => {
     <div>
       <div style={styleAll.Ques}>{props.value}</div>
       <Button onClick={getData}>Get Data</Button>
-      <Box sx={{ height: 400, width: "100%" }}>
-        <DataGrid
-          rows={data}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: {
-                pemailSize: 5,
-              },
-            },
-          }}
-          pemailSizeOptions={[5]}
-          checkboxSelection
-          disableRowSelectionOnClick
-        />
-      </Box>
+      <BoxPagination props={{ rows: data, columns }} />
     </div>
   );
 };

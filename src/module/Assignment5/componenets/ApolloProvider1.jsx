@@ -5,7 +5,7 @@ import {
   ApolloProvider,
 } from "@apollo/client";
 import Question8 from "../helper/Question8";
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 const link = new HttpLink({
   uri: "https://star-wars-graphql-dont-change.p.rapidapi.com/",
   headers: {

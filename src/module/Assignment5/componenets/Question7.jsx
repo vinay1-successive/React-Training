@@ -1,4 +1,4 @@
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 import { Button } from "@mui/base";
 import axios from "axios";
 import { useState } from "react";
@@ -30,8 +30,20 @@ const Question7 = (props) => {
       <div>
         <div style={styleAll.Ques}>{props.value}</div>
         <form style={styleAll.form1}>
-          Moive: <input style={styleAll.input} type="text" name="moive" onChange={handleInput} />
-          Content: <input style={styleAll.input}  type="text" name="content" onChange={handleInput} />
+          Moive:{" "}
+          <input
+            style={styleAll.input}
+            type="text"
+            name="moive"
+            onChange={handleInput}
+          />
+          Content:{" "}
+          <input
+            style={styleAll.input}
+            type="text"
+            name="content"
+            onChange={handleInput}
+          />
         </form>
         <Button onClick={getData}>Post Data</Button>
         <div>

@@ -1,4 +1,4 @@
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;

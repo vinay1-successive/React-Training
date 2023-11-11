@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { GET_ALL_FILMS } from "./Query";
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 const Question9 = () => {
   const { data, loading, error } = useQuery(GET_ALL_FILMS, {
     variables: {

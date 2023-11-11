@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@mui/base";
 import axios from "axios";
-import { styleAll } from "../../../Helper/Styles";
+import { styleAll } from "../../../helper/Styles";
 const Question5 = (props) => {
   const [data, setdata] = useState([]);
   const getData = async () => {

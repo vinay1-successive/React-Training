@@ -1,4 +1,4 @@
-import { styleAll } from "../../../../Helper/Styles"
+import { styleAll } from "../../../../helper/Styles"
 import DataFetchingComponent from "./DisplayData";
 
 const Question15 = (props) => {

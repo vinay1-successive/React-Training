@@ -3,6 +3,7 @@ const linkTextMain = [
   "/Assignment2",
   "/Assignment3",
   "/Assignment4",
+  "/Assignment5",
 ];
 
 const linkTextMain2 = [
@@ -51,4 +52,29 @@ const linkTextMain4 = [
   "/Assignment4/question14",
 ];
 
-export { linkTextMain, linkTextMain2, linkTextMain3, linkTextMain4 };
+const linkTextMain5 = [
+  "/Assignment5/question1",
+  "/Assignment5/question2",
+  "/Assignment5/question3",
+  "/Assignment5/question4",
+  "/Assignment5/question5",
+  "/Assignment5/question6",
+  "/Assignment5/question7",
+  "/Assignment5/question8",
+  "/Assignment5/question9",
+  "/Assignment5/question10",
+  "/Assignment5/question11",
+  "/Assignment5/question12",
+  "/Assignment5/question13",
+  "/Assignment5/question14",
+  "/Assignment5/question15",
+  "/Assignment5/question16",
+];
+
+export {
+  linkTextMain,
+  linkTextMain2,
+  linkTextMain3,
+  linkTextMain4,
+  linkTextMain5,
+};
