@@ -7,10 +7,7 @@ import { styleAll } from "../../../../../helper/Styles";
 const Product = () => {
   const { user } = useContext(userState3);
   const { pId } = useParams();
-  console.log(pId);
   const valid = /^(1?[1-9]|3)$/.test(pId);
-  console.log(valid);
-  console.log(user);
   let data;
   if (valid) {
     data = productData[pId - 1];

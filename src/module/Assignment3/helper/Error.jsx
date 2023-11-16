@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const Error = () => {
-  console.log("Out err0r");
   return (
     <>
       <div>
