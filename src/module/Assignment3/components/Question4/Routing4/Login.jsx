@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import userData from "../../../../../mockData/userData"
+import userData from "../../../../../mockData/userData";
 import { userState3 } from "../../../Assignment3";
 const Login = () => {
   const navigate = useNavigate();
@@ -11,7 +11,6 @@ const Login = () => {
       name: e.target.name.value,
       password: e.target.password.value,
     };
-    console.log(newUser);
     if (
       userData.name === newUser.name &&
       userData.password === newUser.password

@@ -24,10 +24,6 @@ const UserValidate = () => {
     {
       alert("Password Does not match")
     }
-    else
-    {
-      console.log(newData);
-    }
   };
 
   return { data, handleData, handleSubmit };

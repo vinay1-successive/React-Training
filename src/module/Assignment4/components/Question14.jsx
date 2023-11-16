@@ -4,7 +4,6 @@ import Form from "../../../components/Form";
 
 const Question14 = (props) => {
   const { data, error, handleInput, handleSubmit, summ } = useValidate14();
-  console.log(summ);
   const handleForm = (e) => {
     e.preventDefault();
     const check = handleSubmit();

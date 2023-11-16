@@ -1,7 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { styleAll } from "../helper/Styles";
 const Links = ({ props }) => {
-  console.log(props, "sdasd-----------------------");
   return (
     <>
       <div style={styleAll.div}>

@@ -8,12 +8,6 @@ const Question2 = (props) => {
   const [consent, setConsent] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newData = {
-      name: name,
-      gender: gender,
-      consent: consent,
-    };
-    console.log(newData);
   };
   const handleChange = (e) => {
     setName(e.target.value);

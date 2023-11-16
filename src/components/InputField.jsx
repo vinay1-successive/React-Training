@@ -1,6 +1,5 @@
 const InputField = ({ props }) => {
   const { style, type = "", value = "", fun, name = "" } = props;
-  console.log(props);
   return (
     <>
       <input

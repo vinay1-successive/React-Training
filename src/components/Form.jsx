@@ -2,7 +2,6 @@ import { Button, TextField } from "@mui/material";
 import { styleAll } from "../helper/Styles";
 
 const Form = ({props}) => {
-    console.log(props);
   return (
     <>
       <div>

@@ -48,7 +48,6 @@ const Cart = () => {
   };
   const handleRemoveCart = (id) => {
     const newArray = cart.filter((item) => item.id !== id);
-    console.log(newArray);
     setCart(newArray);
   };
 
