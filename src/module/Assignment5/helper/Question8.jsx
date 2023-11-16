@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import { GET_ALL_FILMS } from "./Query";
+import { GET_ALL_FILMS } from "../../../graphql/query/Assignment5";
 const Question8 = () => {
   const { data, loading, error } = useQuery(GET_ALL_FILMS, {
     variables: {
