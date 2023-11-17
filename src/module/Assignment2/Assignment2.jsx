@@ -17,17 +17,18 @@ import CopyToClipboard from "./componenets/CopyToClipboard.jsx";
 import UseLocalStorage1 from "./componenets/UseLocalStorage1.jsx";
 import CustomTimer from "./componenets/CustomTimer.jsx";
 import { Route, Routes } from "react-router-dom";
-import Links from "./componenets/Links.jsx";
+import Links from "../../components/Links.jsx";
 import Error from "./componenets/Error.jsx";
-import Question from "../../MockData/Data2.js";
-import { styleAll } from "../../Helper/Styles.js";
+import Question from "../../mockData/Data2.js";
+import { styleAll } from "../../helper/Styles.js";
 import Counter from "./componenets/Counter.jsx";
+import { linkTextMain2 } from "../../mockData/AssingmentLinks.js";
 const Assignment2 = () => {
   return (
     <>
       <div style={{ display: "flex", width: "100vw", flexDirection: "column" }}>
         <Routes>
-          <Route path="/" element={<Links />}>
+          <Route path="/" element={<Links props={linkTextMain2}/>}>
             <Route
               path="/question1"
               element={<Counter styles={styleAll} value={Question.Counter} />}
@@ -157,4 +158,3 @@ const Assignment2 = () => {
 };
 
 export default Assignment2;
-

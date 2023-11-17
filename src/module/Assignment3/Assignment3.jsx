@@ -1,13 +1,14 @@
 import { createContext, useState } from "react";
-import Error from "../Assignment3/helper/Error.jsx";
-import Nav from "../Assignment3/helper/Nav.jsx";
-import Question from "../../MockData/Data3.js";
+import Error from "./helper/Error.jsx";
+import Question from "../../mockData/Data3.js";
 import { Routes, Route } from "react-router-dom";
-import Question1 from "../../Modals/Assignment3/components/Question1/Question1.jsx";
-import Question2 from "../../Modals/Assignment3/components/Question2/Question2.jsx";
-import Routing from "../../Modals/Assignment3/components/Question3/Routing.jsx";
-import Question4 from "../../Modals/Assignment3/components/Question4/Routing4/Routing4.jsx";
-import { styleAll } from "../../Helper/Styles.js";
+import Question1 from "./components/Question1/Question1.jsx";
+import Question2 from "./components/Question2/Question2.jsx";
+import Routing from "../Assignment3/components/Question3/Routing.jsx";
+import Question4 from "../Assignment3/components/Question4/Routing4/Routing4.jsx";
+import { styleAll } from "../../helper/Styles.js";
+import Links from "../../components/Links.jsx";
+import { linkTextMain3 } from "../../mockData/AssingmentLinks.js";
 
 export const userState3 = createContext();
 
@@ -17,7 +18,7 @@ const Assignment3 = () => {
     <>
       <div>
         <userState3.Provider value={{ user, setUser }}>
-          <Nav />
+          <Links props={linkTextMain3} />
           <Routes>
             <Route
               path="/question1"
@@ -56,4 +57,3 @@ const Assignment3 = () => {
   );
 };
 export default Assignment3;
-
