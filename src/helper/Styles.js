@@ -66,11 +66,6 @@ export const styleAll = {
     flexDirection: "column",
     gap: "30px",
   },
-  div2:{
-    display:"flex",
-    flexDirection:"column",
-    gap:"30px"
-  }
 };
 
 export const style = {

@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
-import { styleAll } from "../../../Helper/Styles";
-import QuestionData from "../../../Components/QuestionData";
-import Question from "../../../MockData/Data6";
+import { styleAll } from "../../../helper/Styles";
+import QuestionData from "../../../components/QuestionData";
+import Question from "../../../mockData/Data6";
 import { ErrorBoundary } from "react-error-boundary";
 const Component1 = React.lazy(() => import("../helper/Component1"));
 const Component2 = React.lazy(() => import("../helper/Component2"));
-const Component3 = React.lazy(() => import("../../../Components/QuestionData"));
+const Component3 = React.lazy(() => import("../../../components/QuestionData"));
 const Question1 = (props) => {
   const { name } = props;
   if (props.value === "Component1") {

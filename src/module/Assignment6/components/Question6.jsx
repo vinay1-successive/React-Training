@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "../../Assignment5/helper/Modal";
-import QuestionData from "../../../Components/QuestionData";
-import Question from "../../../MockData/Data6";
+import QuestionData from "../../../components/QuestionData";
+import Question from "../../../mockData/Data6";
 
 const Question6 = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

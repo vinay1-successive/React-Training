@@ -1,28 +1,23 @@
 import { useState } from "react";
-import { styleAll } from "../../../Helper/Styles";
-import QuestionData from "../../../Components/QuestionData";
-import Question from "../../../MockData/Data6";
-const Question3 = (props) => {
+import { styleAll } from "../../../helper/Styles";
+import QuestionData from "../../../components/QuestionData";
+import Question from "../../../mockData/Data6";
+import SubmitButton from "../../../components/SubmitButton";
+const Question3 = () => {
   const [value, setValue] = useState(0);
+  const handledec = () => {
+    setValue(value - 1);
+  };
+  const handleinc = () => {
+    setValue(value + 1);
+  };
   return (
     <>
       <QuestionData value={Question.Question3} />
       <div style={styleAll.div}>
-        <button
-          type="button"
-          style={styleAll.button}
-          onClick={() => setValue(value - 1)}
-        >
-          dec
-        </button>
+        <SubmitButton props={{ ...styleAll, fun: handledec, bVal: "dec" }} />
         <p style={styleAll.label}> {value} </p>
-        <button
-          type="button"
-          style={styleAll.button}
-          onClick={() => setValue(value + 1)}
-        >
-          inc
-        </button>
+        <SubmitButton props={{ ...styleAll, fun: handleinc, bVal: "inc" }} />
       </div>
     </>
   );

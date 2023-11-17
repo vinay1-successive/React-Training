@@ -1,6 +1,6 @@
-import QuestionData from "../../../Components/QuestionData";
-import { styleAll } from "../../../Helper/Styles";
-import Question from "../../../MockData/Data6";
+import QuestionData from "../../../components/QuestionData";
+import { styleAll } from "../../../helper/Styles";
+import Question from "../../../mockData/Data6";
 
 const Question5 = (props) => {
   const { name, email, phone } = props.value;
