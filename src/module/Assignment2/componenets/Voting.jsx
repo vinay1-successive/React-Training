@@ -1,39 +1,29 @@
 import { useReducer } from "react";
 import { styleAll } from "../../../helper/Styles";
 import QuestionData from "../../../components/QuestionData";
-const colors = {
-  Red: 0,
-  Green: 0,
-};
-
 const reducer = (state, action) => {
   switch (action.type) {
-    case "red":
-      return { ...state, Red: state.Red + 1 };
-    case "green":
-      return { ...state, Green: state.Green + 1 };
+    case "vote":
+      return { ...state, [action.option]: state[action.option] + 1 };
     default:
       return state;
   }
 };
 const Voting = (props) => {
-  const [state, dispatch] = useReducer(reducer, colors);
+  const [state, dispatch] = useReducer(reducer, { Red: 0, Green: 0 });
+  const handleClick = (option) => {
+    dispatch({ type: "vote", option });
+  };
   return (
     <>
-      <QuestionData value={props.value}/>
+      <QuestionData value={props.value} />
       <div style={styleAll.div1}>
         <p style={styleAll.label}>Votes for Red: {state.Red}</p>
         <p style={styleAll.label}>Votes for Green: {state.Green}</p>
-        <button
-          style={styleAll.label}
-          onClick={() => dispatch({ type: "red" })}
-        >
+        <button style={styleAll.label} onClick={() => handleClick("Red")}>
           Color-Red
         </button>
-        <button
-          style={styleAll.label}
-          onClick={() => dispatch({ type: "green" })}
-        >
+        <button style={styleAll.label} onClick={() => handleClick("Green")}>
           Color-Green
         </button>
       </div>

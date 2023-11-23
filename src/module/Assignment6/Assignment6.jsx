@@ -1,4 +1,3 @@
-import { ErrorBoundary } from "react-error-boundary";
 import Question1 from "./components/Question1";
 import Question3 from "./components/Question3";
 import Question4 from "./components/Question4";
@@ -14,11 +13,10 @@ const Assignment6 = () => {
     <>
       <div>
         <Links props={linkTextMain6}/>
-        <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Routes>
             <Route
               path="/question1"
-              element={<Question1 style={style} value={Question.Question1} />}
+              element={<Question1 style={style}  props={{ques:Question.Question1}} />}
             />
             <Route
               path="/question3"
@@ -37,7 +35,6 @@ const Assignment6 = () => {
               element={<Question6 style={style} value={Question.Question6} />}
             />
           </Routes>
-        </ErrorBoundary>
       </div>
     </>
   );
