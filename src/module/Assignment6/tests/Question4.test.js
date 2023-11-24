@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import Question4 from "../components/Question4"; 
+import "@testing-library/jest-dom/extend-expect";
+import Question4 from "../components/Question4";
 
 describe("Question4 Component", () => {
-
   it("should render the form elements", () => {
     render(<Question4 />);
 
@@ -38,7 +38,6 @@ describe("Question4 Component", () => {
     fireEvent.change(passwordInput, { target: { value: "IncorrectPassword" } });
 
     fireEvent.click(submitButton);
-
-    expect(screen.getByText("Incorrect")).toBeInTheDocument();
-  });
+    expect(screen.getByTestId("currValue")).toHaveTextContent("Incorrect");
+});
 });

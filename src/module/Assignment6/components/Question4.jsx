@@ -14,9 +14,6 @@ const Question4 = (props) => {
 
     if (data.name === "Vinay" && data.password === "12345") {
       setUser(true);
-      console.log("Success");
-    } else {
-      console.log("Incorrect");
     }
   };
 
@@ -47,7 +44,7 @@ const Question4 = (props) => {
           {data.name} {data.password}
         </p>
       )}
-      {!user && "Incorrect"}
+      <p data-testid="currValue">{!user && "Incorrect"}</p>
     </div>
   );
 };

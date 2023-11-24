@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { styleAll } from "../../../helper/Styles";
 import QuestionData from "../../../components/QuestionData";
@@ -12,14 +13,17 @@ const Question3 = () => {
     setValue(value + 1);
   };
   return (
-    <>
+    <div>
       <QuestionData value={Question.Question3} />
       <div style={styleAll.div}>
         <SubmitButton props={{ ...styleAll, fun: handledec, bVal: "dec" }} />
-        <p style={styleAll.label}> {value} </p>
+        <p data-testid="num" style={styleAll.label}>
+          {" "}
+          {value}{" "}
+        </p>
         <SubmitButton props={{ ...styleAll, fun: handleinc, bVal: "inc" }} />
       </div>
-    </>
+    </div>
   );
 };
 

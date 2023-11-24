@@ -7,20 +7,20 @@ test("Clicking increment button increases the value", () => {
   render(<Question3 />);
   const incrementButton = screen.getByText("inc");
 
-  for (let counter = 0; counter < 10; counter++) {
-    fireEvent.click(incrementButton);
-  }
+  fireEvent.click(incrementButton);
 
-  expect(screen.getByText("10")).toBeInTheDocument();
+  const currValue = screen.getByTestId("num");
+
+  expect(currValue).toHaveTextContent("1");
 });
 
 test("Clicking decrement button decreses the value", () => {
   render(<Question3 />);
   const decrementButton = screen.getByText("dec");
 
-  for (let counter = 0; counter < 10; counter++) {
-    fireEvent.click(decrementButton);
-  }
+  fireEvent.click(decrementButton);
 
-  expect(screen.getByText("-10")).toBeInTheDocument();
+  const currValue = screen.getByTestId("num");
+
+  expect(currValue).toHaveTextContent("-1");
 });

@@ -94,4 +94,4 @@ const usersObejct = [
   },
 ];
 
-export { Button, Greetings, UserCard, TaskList, Counter, Weather ,usersObejct};
+export { Button, Greetings, UserCard, TaskList, Counter, Weather, usersObejct };
