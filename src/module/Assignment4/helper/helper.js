@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -20,9 +20,8 @@ const UserValidate = () => {
       password1: data.password1,
       password2: data.password2,
     };
-    if(newData.password1!==newData.password2)
-    {
-      alert("Password Does not match")
+    if (newData.password1 !== newData.password2) {
+      alert("Password Does not match");
     }
   };
 
@@ -31,112 +30,52 @@ const UserValidate = () => {
 
 const Sidebar = ({ open, close }) => {
   return (
-    <>
-      <div>
-        <Drawer anchor="left" open={open} close={close}>
-          <List>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question1"
-              onClick={close}
-            >
-              <ListItemText primary="Question1" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question2"
-              onClick={close}
-            >
-              <ListItemText primary="Question2" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question3"
-              onClick={close}
-            >
-              <ListItemText primary="Question3" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question4"
-              onClick={close}
-            >
-              <ListItemText primary="Question4" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question5"
-              onClick={close}
-            >
-              <ListItemText primary="Question5" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question6"
-              onClick={close}
-            >
-              <ListItemText primary="Question6" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question7"
-              onClick={close}
-            >
-              <ListItemText primary="Question7" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question8"
-              onClick={close}
-            >
-              <ListItemText primary="Question8" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question9"
-              onClick={close}
-            >
-              <ListItemText primary="Question9" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question10"
-              onClick={close}
-            >
-              <ListItemText primary="Question10" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question11"
-              onClick={close}
-            >
-              <ListItemText primary="Question11" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question12"
-              onClick={close}
-            >
-              <ListItemText primary="Question12" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question13"
-              onClick={close}
-            >
-              <ListItemText primary="Question13" />
-            </ListItem>
-            <ListItem
-              component={Link}
-              to="/Assignment4/question14"
-              onClick={close}
-            >
-              <ListItemText primary="Question14" />
-            </ListItem>
-          </List>
-        </Drawer>
-      </div>
-    </>
+    <Drawer anchor="left" open={open} close={close}>
+      <List>
+        <ListItem component={Link} to="/Assignment4/question1" onClick={close}>
+          <ListItemText primary="Question1" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question2" onClick={close}>
+          <ListItemText primary="Question2" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question3" onClick={close}>
+          <ListItemText primary="Question3" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question4" onClick={close}>
+          <ListItemText primary="Question4" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question5" onClick={close}>
+          <ListItemText primary="Question5" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question6" onClick={close}>
+          <ListItemText primary="Question6" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question7" onClick={close}>
+          <ListItemText primary="Question7" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question8" onClick={close}>
+          <ListItemText primary="Question8" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question9" onClick={close}>
+          <ListItemText primary="Question9" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question10" onClick={close}>
+          <ListItemText primary="Question10" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question11" onClick={close}>
+          <ListItemText primary="Question11" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question12" onClick={close}>
+          <ListItemText primary="Question12" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question13" onClick={close}>
+          <ListItemText primary="Question13" />
+        </ListItem>
+        <ListItem component={Link} to="/Assignment4/question14" onClick={close}>
+          <ListItemText primary="Question14" />
+        </ListItem>
+      </List>
+    </Drawer>
   );
 };
 
@@ -169,7 +108,6 @@ const useValidate = () => {
   };
   return { data, error, handleInput, handleSubmit };
 };
-
 
 const Validation = () => {
   const validationSchema = yup.object({
@@ -227,10 +165,4 @@ const useValidate14 = () => {
   return { data, error, handleInput, handleSubmit, summ };
 };
 
-export {
-  UserValidate,
-  Sidebar,
-  useValidate,
-  Validation,
-  useValidate14,
-};
+export { UserValidate, Sidebar, useValidate, Validation, useValidate14 };

@@ -1,11 +1,10 @@
+import React from "react";
 const SubmitButton = ({ props }) => {
-  const { style, type = "", fun = null } = props;
+  const { style, type = "", fun = null, bVal = "" } = props;
   return (
-    <>
-      <button style={style.button} onClick={fun} type={type}>
-        Submit
-      </button>
-    </>
+    <button style={style} onClick={fun} type={type}>
+      {bVal ? bVal : "Submit"}
+    </button>
   );
 };
 

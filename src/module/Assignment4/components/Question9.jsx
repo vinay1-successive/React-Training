@@ -7,15 +7,13 @@ const Question9 = (props) => {
     setOpen(!open);
   };
   return (
-    <>
-      <div>
+    <div>
         <div style={props.style.div}>
           <div style={props.style.Ques}>{props.value}</div>
           <button onClick={handleSidebar}>Open</button>
           <Sidebar open={open} close={handleSidebar} />
         </div>
       </div>
-    </>
   );
 };
 

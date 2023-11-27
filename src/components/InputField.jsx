@@ -1,5 +1,5 @@
 const InputField = ({ props }) => {
-  const { style, type = "", value = "", fun, name = "" } = props;
+  const { style="", type = "", value = "", fun, name = "", placeholder=""} = props;
   return (
     <>
       <input
@@ -9,6 +9,7 @@ const InputField = ({ props }) => {
         onChange={fun}
         required
         name={name}
+        placeholder={placeholder}
       />
     </>
   );

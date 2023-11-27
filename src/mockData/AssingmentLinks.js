@@ -4,6 +4,7 @@ const linkTextMain = [
   "/Assignment3",
   "/Assignment4",
   "/Assignment5",
+  "/Assignment6",
 ];
 
 const linkTextMain2 = [
@@ -71,10 +72,18 @@ const linkTextMain5 = [
   "/Assignment5/question16",
 ];
 
+const linkTextMain6 = [
+  "/Assignment6/question1",
+  "/Assignment6/question3",
+  "/Assignment6/question4",
+  "/Assignment6/question5",
+  "/Assignment6/question6",
+];
 export {
   linkTextMain,
   linkTextMain2,
   linkTextMain3,
   linkTextMain4,
   linkTextMain5,
+  linkTextMain6
 };
